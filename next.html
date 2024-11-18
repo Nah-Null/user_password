@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <h1 id="user"></h1>
+    <h1 id="pass"></h1>
+    <script>
+        // ดึงข้อมูลจาก localStorage
+        const name = localStorage.getItem('name') || 'Not provided';
+        const username = localStorage.getItem('username') || 'Not provided';
+        const password = localStorage.getItem('password') || 'Not provided';
+
+        // อัปเดตข้อความในหน้า
+        document.getElementById('name').innerText = `Name: ${name}`;
+        document.getElementById('user').innerText = `Username: ${username}`;
+        document.getElementById('pass').innerText = `Password: ${password}`;
+    </script>
+</body>
+</html>
